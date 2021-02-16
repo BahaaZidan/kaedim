@@ -1,0 +1,33 @@
+.searchResultSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movieCard {
+  max-width: 240px;
+  margin: 15px;
+}
+
+.searchInputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  gap: 20px 0px;
+}
+
+.searchInput {
+  max-width: 500px;
+  height: 60px;
+  font-size: 20px;
+}
+
+.searchButton {
+  width: 120px;
+}
+
+.searchResultPagination {
+  text-align: center;
+  padding: 25px;
+}

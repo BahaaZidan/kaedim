@@ -1,0 +1,14 @@
+.fullPageTable {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.contributorsTableContainer {
+  max-width: 900px;
+
+  overflow-x: hidden;
+
+  padding: 15px;
+}
