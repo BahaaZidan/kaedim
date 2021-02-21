@@ -62,7 +62,10 @@ const Home = () => {
       )}
       <Pagination
         className="searchResultPagination"
-        onChange={(page) => execute(searchValue, page)}
+        onChange={(page) => {
+          execute(searchValue, page);
+          window.scrollTo(0, 0);
+        }}
         total={result?.data?.totalResults}
         pageSize={10}
         hideOnSinglePage

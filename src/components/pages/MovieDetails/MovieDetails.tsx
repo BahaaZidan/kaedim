@@ -1,5 +1,5 @@
 import "./MovieDetails.css";
-import { Typography, Image } from "antd";
+import { Typography, Image, Descriptions } from "antd";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { usePromise } from "../../../utils/hooks";
@@ -30,12 +30,33 @@ const MovieDetails = () => {
   return (
     <>
       <section className="movieDetailsSection">
-        <Typography.Title>{movieDetails.Title}</Typography.Title>
+        <h1 className="movieTitle">{movieDetails.Title}</h1>
         <Image
           alt="movie poster"
           src={movieDetails.Poster}
           fallback={FALLBACK_IMAGE_BASE64}
+          preview={false}
         />
+        <Descriptions column={1} bordered>
+          <Descriptions.Item label="Release Date">
+            {movieDetails.Released}
+          </Descriptions.Item>
+          <Descriptions.Item label="Plot">
+            {movieDetails.Plot}
+          </Descriptions.Item>
+          <Descriptions.Item label="Writer">
+            {movieDetails.Writer}
+          </Descriptions.Item>
+          <Descriptions.Item label="Director">
+            {movieDetails.Director}
+          </Descriptions.Item>
+          <Descriptions.Item label="Genre">
+            {movieDetails.Genre}
+          </Descriptions.Item>
+          <Descriptions.Item label="Actors">
+            {movieDetails.Actors}
+          </Descriptions.Item>
+        </Descriptions>
       </section>
     </>
   );
