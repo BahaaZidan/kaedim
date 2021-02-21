@@ -3,7 +3,7 @@ import axios from "axios";
 const API_KEY = "4577bb92";
 
 export const searchMovie = (searchString: string, page: number = 1) =>
-  axios.get("http://www.omdbapi.com/", {
+  axios.get("https://www.omdbapi.com/", {
     params: {
       s: searchString,
       type: "movie",
@@ -13,7 +13,7 @@ export const searchMovie = (searchString: string, page: number = 1) =>
   });
 
 export const getMovieDetails = (imdbID: string) =>
-  axios.get("http://www.omdbapi.com/", {
+  axios.get("https://www.omdbapi.com/", {
     params: {
       i: imdbID,
       plot: "full",
